@@ -47,37 +47,20 @@ class ApplicationController < Sinatra::Base
 
 end
 
+class Dog 
 
-class Dog
+  attr_accessor :name, :breed, :age 
+  @@all = []
 
-    def initialize (name, breed, age)
-        @name = name
-        @breed = breed
-        @age = age
-    end
+  def initialize(name, breed, age)
+    @name = name 
+    @breed = breed 
+    @age = age 
+    @@all << self 
+  end 
 
-def name
-@name
-end
+  def self.all 
+    @@all 
+  end 
+end 
 
-def name=(name)
-@name = name
-end
-
-def age
-@age
-end
-
-def age=(age)
-@age = age
-end
-
-def breed
-@breed
-end
-
-def breed=(breed)
-@breed = breed
-end
-
-end
