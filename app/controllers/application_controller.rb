@@ -9,58 +9,25 @@ class ApplicationController < Sinatra::Base
   	erb :index
   end
 
-  class Dog
-
-      def initialize (name, breed, age)
-          @name = name
-          @breed = breed
-          @age = age
-      end
-
-  def name
-  @name
-  end
-
-  def name=(name)
-  @name = name
-  end
-
-  def age
-  @age
-  end
-
-  def age=(age)
-  @age = age
-  end
-
-  def breed
-  @breed
-  end
-
-  def breed=(breed)
-  @breed = breed
-  end
-
-  end
+  
 
 
 
 end
 
-class Dog 
+class Dog
 
-  attr_accessor :name, :breed, :age 
+  attr_accessor :name, :breed, :age
   @@all = []
 
   def initialize(name, breed, age)
-    @name = name 
-    @breed = breed 
-    @age = age 
-    @@all << self 
-  end 
+    @name = name
+    @breed = breed
+    @age = age
+    @@all << self
+  end
 
-  def self.all 
-    @@all 
-  end 
-end 
-
+  def self.all
+    @@all
+  end
+end
